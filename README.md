@@ -2,10 +2,9 @@
 
 **PDF Highlight Extractor** is a Python-based desktop application that extracts highlighted text and comments from PDF files, organizes them, and outputs them into Markdown files.
 It's designed to make it easy for readers, students, and professionals to review and organize the highlights and notes they make while reading PDFs.
-User Interface :
-![image](https://github.com/user-attachments/assets/50adcde5-b5cc-466f-a0ad-d73f082382c0)
-Extracted Highlights :
-![image](https://github.com/user-attachments/assets/3b9887ee-20a1-4f69-b7bd-8e88a33a2520)
+
+## User Interface :
+<img src="https://github.com/user-attachments/assets/50adcde5-b5cc-466f-a0ad-d73f082382c0" width="600" />
 
 ## Motivation :
 As someone who reads a lot of documents in PDF format (books, papers, slides, etc.), 
