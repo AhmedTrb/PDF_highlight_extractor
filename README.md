@@ -23,7 +23,7 @@ and outputs them in Markdown format. Since I use Obsidian as my note-taking syst
 - Extract Highlights: The application extracts all highlights and comments from PDF files.
 - Markdown Output: The extracted highlights and associated comments are saved in Markdown files, with each entry specifying the page number.
 - Customizable: Built for personal use, so you can modify or extend it to meet your needs.
-- Simple Input/Output: Just specify the folder containing your PDFs, select the file you want to process, and get the output in a separate folder.
+- Simple Input/Output: specify the folder containing your PDFs, select the file you want to process, and get the output in a separate folder.
 
 ## How to Use :
 1.Clone the repository or download the files.
@@ -35,12 +35,17 @@ and outputs them in Markdown format. Since I use Obsidian as my note-taking syst
 ```bash
   python app.py
 ```
+
 4.Choose the folder containing the PDFs you want to process.
+
 5.Select the PDF file from which you want to extract highlights.
+
 5.The extracted highlights and notes will be saved in Markdown format in the specified output folder.
 
 
+
 ## Motivation Behind Building :
+
 I created this tool because I found myself often losing track of the valuable notes and highlights I made during my reading.
 While solutions exist, I wanted something tailored to my workflow. By exporting the highlights to Markdown,
 I can now easily organize and review my notes, especially in Obsidian, where I keep all my study and reflection notes.
