@@ -1,5 +1,4 @@
 import fitz  # PyMuPDF
-import numpy as np
 from PySide6.QtCore import Qt, QThread, Signal
 
 
@@ -27,8 +26,8 @@ class HighlightExtractorThread(QThread):
         # Convert color to a NumPy array for distance calculation
         color_array = np.array(color)
 
-        # Find the closest color in the mapping using Euclidean distance
-        best_match = min(color_mapping.keys(), key=lambda ref_color: np.linalg.norm(color_array - np.array(ref_color)))
+        # Find the closest color in the mapping using Euclidean distance without numpy
+        best_match = min(color_mapping.keys(), key=lambda ref_color: sum((color_array[i] - ref_color[i]) ** 2 for i in range(len(color_array))) ** 0.5)
 
         return color_mapping[best_match]
 
