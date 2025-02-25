@@ -281,9 +281,22 @@ class PDFHighlightExtractor(QWidget):
             self.show_error("No highlights found in the selected PDF.")
             return
 
+        # Organizing highlights by category
+        categorized_highlights = {}
+        for highlight in highlights:
+            category = highlight["category"]
+            if category not in categorized_highlights:
+                categorized_highlights[category] = []
+            categorized_highlights[category].append(highlight)
+
         preview_text = ""
-        for page, text in highlights:
-            preview_text += f"**Page {page}**:\n - {text}\n\n"
+        for category, notes in categorized_highlights.items():
+            preview_text += f"## {category} Notes\n\n"
+            for note in notes:
+                preview_text += f"**Page {note['page']}**:\n - {note['text']}\n"
+                if note["comment"]:  # Add popup comment if available
+                    preview_text += f"- *my reflection :* {note['comment']}\n"
+                preview_text += "\n"
 
         self.preview_area.setMarkdown(preview_text)
         self.save_button.setEnabled(True)
@@ -304,10 +317,23 @@ class PDFHighlightExtractor(QWidget):
         try:
             with open(output_path, 'w', encoding='utf-8') as md_file:
                 md_file.write(f"# Highlights from {os.path.basename(self.selected_pdf)}\n\n")
-                for page, highlight in self.current_highlights:
-                    md_file.write(f"**Page {page}**:\n")
-                    md_file.write(f" - {highlight}\n")
 
+                # Organizing highlights by category
+                categorized_highlights = {}
+                for highlight in self.current_highlights:
+                    category = highlight["category"]
+                    if category not in categorized_highlights:
+                        categorized_highlights[category] = []
+                    categorized_highlights[category].append(highlight)
+
+                for category, notes in categorized_highlights.items():
+                    md_file.write(f"## {category} Notes\n\n")
+                    for note in notes:
+                        md_file.write(f"**Page {note['page']}**:\n")
+                        md_file.write(f" - {note['text']}\n")
+                        if note["comment"]:  # Add popup comment if available
+                            md_file.write(f"\n\n- *Comment:* {note['comment']}\n")
+                        md_file.write("\n")
 
             self.status_label.setText(f"Highlights saved to: {output_path}")
         except Exception as e:
