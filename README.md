@@ -6,17 +6,11 @@
 <img src="https://github.com/user-attachments/assets/50adcde5-b5cc-466f-a0ad-d73f082382c0" width="600" />
 
 ## Motivation :
-As someone who reads a lot of documents in PDF format (books, papers, slides, etc.), 
-I often find myself using the highlight tool in the Microsoft Edge PDF viewer. After finishing my reading, 
-I save these files, but the notes and highlights remain trapped within the documents. Over time, this information is lost, 
-and I rarely go back to review or write them down. This, I felt, was a missed opportunity for learning and reflection.
+As someone who reads a lot of documents in PDF format—be it books, papers, slides, or other materials—I often found myself using the highlight tool in the Microsoft Edge PDF viewer. After reading, I would save the PDFs, but the highlights and notes would remain trapped within the document. Over time, this valuable information would get lost, and I rarely revisited or reflected on those notes. This felt like a missed opportunity for learning and deeper understanding.
 
-So, I decided to build a tool that could solve this problem. The goal was to create something that would allow me to extract highlights and notes from my PDFs,
-organize them, and output them in a format that I could easily use for review and reflection. Although there are solutions already available online,
-I wanted something custom-built that could cater to my specific needs and that I could tweak as I liked.
+To solve this problem, I decided to create a tool that could help me extract my highlights and notes from PDFs, organize them, and output them in a format that would be easy to review and reflect on. Although there are existing solutions, I wanted something custom-built to fit my specific needs and be fully adaptable to my workflow.
 
-This Python app extracts highlights from PDF files, identifies the page numbers where the highlights were taken, 
-and outputs them in Markdown format. Since I use Obsidian as my note-taking system, Markdown was the ideal output format for me.
+The result is a Python-based desktop application that extracts highlights and comments from PDF files. It organizes the data based on color or user-defined criteria and outputs everything into a Markdown file. Since I use Obsidian as my note-taking system, Markdown was the perfect format for me to store and structure these insights.
 
 ## Features :
 - Extract Highlights: The application extracts all highlights and comments from PDF files.
@@ -28,6 +22,9 @@ and outputs them in Markdown format. Since I use Obsidian as my note-taking syst
 
 ## How to Use :
 1.Clone the repository or download the files.
+```bash
+git clone https://github.com/AhmedTrb/PDF_highlight_extractor.git
+```
 2.Install the required dependencies by running
 ```bash
   pip install -r requirements.txt
@@ -43,12 +40,3 @@ and outputs them in Markdown format. Since I use Obsidian as my note-taking syst
 
 5.The extracted highlights and notes will be saved in Markdown format in the specified output folder.
 
-
-
-## Motivation Behind Building :
-
-I created this tool because I found myself often losing track of the valuable notes and highlights I made during my reading.
-While solutions exist, I wanted something tailored to my workflow. By exporting the highlights to Markdown,
-I can now easily organize and review my notes, especially in Obsidian, where I keep all my study and reflection notes.
-
-This project has helped me stay more organized and intentional with my reading, and I hope it will be helpful to others who face the same challenge!
