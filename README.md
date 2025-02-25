@@ -20,6 +20,8 @@ and outputs them in Markdown format. Since I use Obsidian as my note-taking syst
 
 ## Features :
 - Extract Highlights: The application extracts all highlights and comments from PDF files.
+- Categorize Highlights: Highlights are automatically categorized based on color or other user-defined criteria. This makes it easier to organize and review key insights.
+- Extract Comment Popups: The application extracts all comments and associated popup text. This allows users to see reflections, annotations, or thoughts related to specific highlighted sections.
 - Markdown Output: The extracted highlights and associated comments are saved in Markdown files, with each entry specifying the page number.
 - Customizable: Built for personal use, so you can modify or extend it to meet your needs.
 - Simple Input/Output: specify the folder containing your PDFs, select the file you want to process, and get the output in a separate folder.
